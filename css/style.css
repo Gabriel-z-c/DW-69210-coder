@@ -1,0 +1,365 @@
+/* -- general-- */
+* .header{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* -- TIPOGRAFÍA GENERAL -- */
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ddc4e2;
+  text-align: center;
+  margin: 50px 0 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(184, 180, 132, 0.2);
+  text-transform: uppercase;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.main-content h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #533B4D;
+}
+
+/* -- heder-- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #b7a6b3;
+  color: #FAE3C6;
+}
+
+.logo-container img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.title-container h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #ffc145;
+}
+
+.title-container p {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #886868;
+}
+
+/* -- nav -- */
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.nav ul li a {
+  color: #ffc145;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+  color: #e0a800;
+}
+
+/* -- main contenido -- */
+.main-content {
+  padding: 40px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #967a28;
+}
+
+.main-image img {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(157, 132, 47, 0.1);
+}
+
+/* -- contacto formulario -- */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #f9f4ed;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(83, 59, 77, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #533B4D;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ffc145;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e0a800;
+}
+
+/* -- secciones -- */
+.section-productos,
+.section-servicios {
+  padding: 40px 20px;
+  background-color: #f9f4ed;
+}
+
+.section-productos h2,
+.section-servicios h2 {
+  font-size: 2rem;
+  color: #533B4D;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(83, 59, 77, 0.1);
+}
+
+.card-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px 0;
+}
+
+.card {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #886868;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-size: 0.5rem;
+  color: #6d5f3f;
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+}/* =============================
+   FORMULARIO DE CONTACTO
+============================= */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #f9f4ed;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(83, 59, 77, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #533B4D;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ffc145;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e0a800;
+}
+/* -- footer cierre de paginas  */
+.footer {
+  background-color: #533B4D;
+  color: rgb(225, 182, 51);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer .social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #832eb1;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.footer .social-link:hover {
+  color: rgb(225, 182, 51);
+}
+
+.footer .social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+/* -- responsive -- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .logo-container img {
+    width: 45px;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .section-productos h2,
+  .section-servicios h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* pantalla escritorio */
+@media (min-width: 769px) 
+  h1 {
+    font-size: 4rem;
+  }
+
+  .logo-container img {
+    width: 60px;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .main-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .section-productos h2,
+  .section-servicios h2 {
+    font-size: 2.8rem;
+  }
