@@ -1,0 +1,54 @@
+
+/* nosotros */
+
+.section-nosotros {
+    padding: 60px 20px;
+    background-color: #f9f4ed;
+    text-align: center;
+  
+    h2 {
+      font-size: 2.2rem;
+      color: #533B4D;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
+  
+      @media (min-width: 769px) {
+        font-size: 2.8rem;
+      }
+    }
+  
+    .nosotros-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+  
+      .texto {
+        max-width: 600px;
+        font-size: 1.1rem;
+        color: #6d5f3f;
+        line-height: 1.8;
+        font-family: 'Courier New', Courier, monospace;
+      }
+  
+      .imagen {
+        img {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  

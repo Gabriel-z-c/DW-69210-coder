@@ -1,0 +1,49 @@
+// -- colores -- //
+$color-primary: #ffc145;
+$color-primary-dark: #e0a800;
+$color-secondary: #886868;
+$color-accent: #832eb1;
+$color-light: #fefefe;
+$color-bg: #f9f4ed;
+$color-bg-alt: #ddc4e2;
+$color-dark: #333;
+$color-header-bg: #b7a6b3;
+$color-header-text: #FAE3C6;
+$color-section-bg: linear-gradient(135deg, #f9f4ed, #ddc4e2);
+$color-shadow-dark: rgba(0, 0, 0, 0.05);
+$color-shadow-gold: rgba(157, 132, 47, 0.1);
+$color-shadow-purple: rgba(83, 59, 77, 0.1);
+$color-shadow-yellow: rgba(119, 111, 27, 0.2);
+$color-footer: #533B4D;
+$color-footer-text: rgb(225, 182, 51);
+
+// --tipografias-- //
+$font-main: 'Times New Roman', Times, serif;
+$font-monospace: 'Courier New', Courier, monospace;
+
+// -- point -- //
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+
+// -- fuentes-- //
+$font-h1: 2.5rem;
+$font-h1-sm: 2rem;
+$font-h1-lg: 4rem;
+
+$font-h2: 1.8rem;
+$font-h2-md: 2.5rem;
+$font-h2-lg: 2.8rem;
+
+$font-h3: 1.5rem;
+$font-p: 1.1rem;
+$font-small: 1rem;
+$font-card-title: 1.3rem;
+
+// -- bordes -- //
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 10px;
+
+// --otros-- //
+$transition-fast: 0.3s ease;
+$transition-medium: 0.6s ease;

@@ -1,21 +1,28 @@
-/* -- general-- */
-* .header{
+@import"partials/header-footer";
+@import"partials/contactos";
+@import"partials/index";
+@import"partials/nosotros";
+@import"partials/productos";
+
+/* -- general -- */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #fefefe;
   color: #333;
   line-height: 1.6;
 }
+
 ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* -- TIPOGRAFÍA GENERAL -- */
+
 h1 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2.5rem;
@@ -24,30 +31,17 @@ h1 {
   text-align: center;
   margin: 50px 0 20px;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(184, 180, 132, 0.2);
+  text-shadow: 2px 2px 4px rgba(119, 111, 27, 0.2);
   text-transform: uppercase;
 }
 
-.main-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  text-transform: uppercase;
-}
-
-.main-content h3 {
-  font-size: 1.5rem;
-  margin-top: 15px;
-  color: #533B4D;
-}
-
-/* -- heder-- */
+/* -- header -- */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  width: 100%;
   background-color: #b7a6b3;
   color: #FAE3C6;
 }
@@ -90,13 +84,27 @@ h1 {
   color: #e0a800;
 }
 
-/* -- main contenido -- */
+/* -- main -- */
 .main-content {
   padding: 40px;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  text-align: center;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.main-content h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #533B4D;
 }
 
 .main-content p {
@@ -113,7 +121,7 @@ h1 {
   box-shadow: 0 4px 6px rgba(157, 132, 47, 0.1);
 }
 
-/* -- contacto formulario -- */
+/* -- formulario -- */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -158,15 +166,19 @@ form button:hover {
 }
 
 /* -- secciones -- */
-.section-productos,
-.section-servicios {
+.section-productos {
   padding: 40px 20px;
-  background-color: #f9f4ed;
+  background: linear-gradient(135deg, #f9f4ed, #ddc4e2);
+  transition: background 0.6s ease;
 }
 
-.section-productos h2,
+.section-productos p {
+  font-size: 1.2rem;
+}
+
 .section-servicios h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
   color: #533B4D;
   text-align: center;
   margin-bottom: 30px;
@@ -183,14 +195,33 @@ form button:hover {
   padding: 20px 0;
 }
 
+/* -- card animaciones -- */
 .card {
   background-color: #fefefe;
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 1s forwards;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card:hover {
@@ -214,14 +245,12 @@ form button:hover {
 }
 
 .card p {
-  font-size: 0.5rem;
+  font-size: 1.1rem;
   color: #6d5f3f;
   line-height: 1.5;
   font-family: 'Courier New', Courier, monospace;
   margin-top: 10px;
-}/* =============================
-   FORMULARIO DE CONTACTO
-============================= */
+}/* -- formulario -- */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -232,39 +261,7 @@ form {
   box-shadow: 0 4px 8px rgba(83, 59, 77, 0.1);
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #533B4D;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-form button {
-  padding: 10px 20px;
-  background-color: #ffc145;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #e0a800;
-}
-/* -- footer cierre de paginas  */
+/* -- footer -- */
 .footer {
   background-color: #533B4D;
   color: rgb(225, 182, 51);
@@ -301,14 +298,22 @@ form button:hover {
 }
 
 /* -- responsive -- */
+/* Mobile */
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
   }
-/* Tablet */
-@media (min-width: 481px) and (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+
+  .section-productos p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #533B4D;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+  }
+
+  .section-servicios h2 {
+    font-size: 1.4rem;
   }
 
   .logo-container img {
@@ -324,22 +329,25 @@ form button:hover {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .main-content h2 {
-    font-size: 2.5rem;
-  }
-
-  .section-productos h2,
-  .section-servicios h2 {
-    font-size: 2.5rem;
-  }
+  .main-content h2, 
+.section-productos h2,
+.section-servicios h2 {
+  font-size: 2.5rem;
+}
 }
 
-/* pantalla escritorio */
-@media (min-width: 769px) 
+/* -- computadora escritorio styles -- */
+@media (min-width: 769px) {
   h1 {
     font-size: 4rem;
   }
+  @media (min-width: 769px) {
+    .section-productos h2,
+    .section-servicios h2 {
+      font-size: 2.4rem; 
+    }
+  }
+  
 
   .logo-container img {
     width: 60px;
@@ -363,3 +371,4 @@ form button:hover {
   .section-servicios h2 {
     font-size: 2.8rem;
   }
+}

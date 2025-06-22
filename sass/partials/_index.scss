@@ -1,0 +1,88 @@
+
+
+/* index */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  /* -- general -- */
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ddc4e2;
+    text-align: center;
+    margin: 50px 0 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(119, 111, 27, 0.2);
+    text-transform: uppercase;
+  }
+  
+  .main-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+  }
+  
+  .main-content h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #533B4D;
+  }
+  
+  /* -- heder-- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #b7a6b3;
+    color: #FAE3C6;
+  }
+  
+  .logo-container img {
+    width: 40px;
+    height: auto;
+    display: block;
+  }
+  
+  .title-container h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #ffc145;
+  }
+  
+  .title-container p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #886868;
+  }
+  
+  /* -- nav -- */
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .nav ul li a {
+    color: #ffc145;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav ul li a:hover,
+  .nav ul li a.active {
+    color: #e0a800;}
+
+    
